@@ -1,6 +1,6 @@
 *.class
 target/
-src/main/java/com/santiago/red_social/.DS_Store
+src/main/java/com/mensajes_app/.DS_Store
 src/.DS_Store
 .settings/
 .project
