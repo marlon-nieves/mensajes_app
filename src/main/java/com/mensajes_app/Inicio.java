@@ -9,7 +9,7 @@ public class Inicio {
         try(Connection cnx = conexion.get_connection()){
 
         }catch (Exception e){
-            System.out.println(e);
+            System.out.println("Error de conexion"+ e);
         }
     }
 }
