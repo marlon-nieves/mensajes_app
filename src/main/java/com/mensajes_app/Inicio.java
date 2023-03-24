@@ -1,4 +1,4 @@
-package com.platzi.mensajes_app;
+package com.mensajes_app;
 
 import java.sql.Connection;
 
