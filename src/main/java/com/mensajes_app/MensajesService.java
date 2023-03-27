@@ -14,19 +14,38 @@ public class MensajesService {
         Mensajes datos = new Mensajes();
         datos.setMensaje(mensaje);
         datos.setAutor_mensaje(nombre);
-        MensajesDAO.crearMensajeDAO(datos);
+        MensajesDAO.crearMensajeDB(datos);
 
 
     }
-    public static void leerMensaje(){
+    public static void listarMensajes(){
+        MensajesDAO.leerMensajeDB();
 
     }
 
-    public static void borrarMensaje(){
+    public static void borrarMensajes(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Indica el id del mensaje a borrar: ");
+        int id_mensaje = sc.nextInt();
+        MensajesDAO.borrarMensajeDB(id_mensaje);
 
     }
 
-    public static void editarMensaje(){
+    public static void editarMensajes(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escribe tu nuevo mensaje: ");
+        String mensaje = sc.nextLine();
 
+        System.out.println("Escribe el nuevo autor del mensaje: ");
+        String nombre1 = sc.nextLine();
+
+        System.out.println("Indica el id del mensaje a editar: ");
+        int id_mensaje = sc.nextInt();
+
+        Mensajes actualizacion = new Mensajes();
+        actualizacion.setMensaje(mensaje);
+        actualizacion.setAutor_mensaje(nombre1);
+        actualizacion.setId_mensaje(id_mensaje);
+        MensajesDAO.actualizarMensajeDB(actualizacion);
     }
 }

@@ -8,11 +8,12 @@ public class Inicio {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
         do {
+            System.out.println("-----------------------");
             System.out.println("Aplicacion de mensajes");
-            System.out.println("1. Crear mensaje");
-            System.out.println("2. Listar mensaje");
-            System.out.println("3. Editar mensaje");
-            System.out.println("4. Eliminar mensaje");
+            System.out.println("1. Crear mensajes");
+            System.out.println("2. Listar mensajes");
+            System.out.println("3. Editar mensajes");
+            System.out.println("4. Eliminar mensajes");
             System.out.println("5. Salir");
             opcion = sc.nextInt();
             switch (opcion) {
@@ -20,13 +21,13 @@ public class Inicio {
                     MensajesService.crearMensaje();
                     break;
                 case 2:
-                    MensajesService.leerMensaje();
+                    MensajesService.listarMensajes();
                     break;
                 case 3:
-                    MensajesService.editarMensaje();
+                    MensajesService.editarMensajes();
                     break;
                 case 4:
-                    MensajesService.borrarMensaje();
+                    MensajesService.borrarMensajes();
                     break;
                 default:
                     break;
